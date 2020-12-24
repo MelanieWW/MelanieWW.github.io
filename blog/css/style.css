@@ -1,0 +1,151 @@
+/* Mobile First Layout */
+.container{
+    display:grid;
+    grid-template-rows: 350px 44px 1fr 60px;
+    grid-template-areas:
+    "hd"
+    "fr"
+    "main"
+    "ft";
+}
+.box{
+   background-color: rgba(252, 252, 252, 0.205);
+}
+.header{
+    display:grid;
+    grid-area: hd; 
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 100%;
+    background-image: url('img/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .heading_logo{
+    grid-column: 1;
+    grid-row: 1;
+    background-image: url('img/pgo_logo.png');
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .heading_blog{
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    text-align: center;
+  }
+  .heading_icon{
+    grid-column: 3;
+    grid-row: 1;
+    align-self: center;
+    text-align: end;
+  }
+    form.searching input[type=text] {
+    float: left;
+    padding: 10px;
+    font-size: 12px;
+    border: 1px solid grey;
+    position: left;
+    width: 50%;
+    background: #f1f1f1;
+    /*margin-bottom: 50px;*/
+    }
+  
+    form.searching button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: rgb(231, 209, 110);
+    color: white;
+    font-size: 12px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    /*margin-bottom: 50px*/
+    }
+  
+    form.searching button:hover {
+    background: rgb(231, 163, 73);
+    }
+
+.feature{
+  grid-area: fr;
+  background-color: rgba(97, 74, 26, 0.144);
+}
+.topnav {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    background-color: rgba(90, 79, 89, 0.76);
+    position: relative;
+    bottom: 0px;
+}
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: rgb(132, 165, 235);
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: rgba(90, 85, 165, 0.856);
+    color: white;
+  }
+
+.content{
+  grid-area: main;
+}
+.blog{
+    display: block;
+    padding: 1em;
+    font-family: monospace;
+    margin: 3em 3em;   
+    box-shadow: 0 1.5px 4px rgba(0,0,0,0.24), 0 1.5px 6px rgba(0,0,0,0.12);
+    border: 1px solid #e0e0e0;
+    word-wrap: break-word;
+    line-height: 1.42;    
+}
+.footer {
+    grid-area: ft;
+    background: rgba(83, 83, 79, 0.349);
+    border-radius: 5px;
+    padding-left: 25px;
+    font-size: 18px;
+}
+/* If wide enough */
+@media(min-width:900px){
+  .container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 350px 1fr 60px;
+    grid-template-areas: 
+    "hd hd hd hd hd hd hd hd"
+    "fr main main main main main main main"
+    "ft ft ft ft ft ft ft ft";
+  }
+  #img1{
+    width: 32%;
+    height:32%;
+  }
+  #img2,#img3,#img4{
+    width: 15%;
+    height:15%;
+  }
+  .topnav {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: rgba(90, 79, 89, 0.76);
+    position: relative;
+    margin: 10px;
+    grid-gap: 5px;
+    border-radius: 5px;
+}
+}
